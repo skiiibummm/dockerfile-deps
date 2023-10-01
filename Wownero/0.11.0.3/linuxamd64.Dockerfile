@@ -42,7 +42,7 @@ RUN find /scripts/ -type f -print0 | xargs -0 chmod a+x
 RUN addgroup --system --gid 101 wownero && \
 	adduser --system --disabled-password --uid 101 --gid 101 wownero && \
 	mkdir -p /wallet /home/wownero/.bitwownero && \
-	chown -R wownero:wownero /home/monero/.bitwownero && \
+	chown -R wownero:wownero /home/wownero/.bitwownero && \
 	chown -R wownero:wownero /wallet
 
 # Specify necessary volumes

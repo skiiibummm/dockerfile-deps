@@ -51,9 +51,9 @@ VOLUME /home/wownero/.bitwownero
 VOLUME /wallet
 
 # Expose p2p, RPC, and ZMQ ports
-EXPOSE 18080
-EXPOSE 18081
-EXPOSE 18082
+EXPOSE 18180
+EXPOSE 18181
+EXPOSE 18182
 
 # Set HOME environment variable
 ENV HOME /home/wownero
@@ -62,4 +62,4 @@ ENV HOME /home/wownero
 USER wownero
 
 # Add HEALTHCHECK against get_info endpoint
-HEALTHCHECK --interval=5s --timeout=3s CMD curl --fail http://localhost:18081/get_info || exit 1
+HEALTHCHECK --interval=5s --timeout=3s CMD curl --fail http://localhost:18181/get_info || exit 1
